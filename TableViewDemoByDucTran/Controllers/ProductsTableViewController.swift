@@ -8,9 +8,16 @@
 
 import UIKit
 
-class ProductsTableViewController: UITableViewController {
+protocol toggleForLeftSide:class {
+    func toggleLeftSide(productsTVC:ProductsTableViewController)
+}
 
-    var products:[ProductLine] = ProductLine.productLines()
+class ProductsTableViewController: UITableViewController
+{
+    
+    weak var delegate:toggleForLeftSide?
+
+    var products:ProductLine = ProductLine.productLines().first!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,27 +27,32 @@ class ProductsTableViewController: UITableViewController {
         navigationItem.rightBarButtonItem = editButtonItem
     
     }
+    @IBAction func toggleLeftSideBar(_ sender: UIBarButtonItem)
+    {
+        delegate?.toggleLeftSide(productsTVC: self)
+    }
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        let productLineHeader = products[section]
-        return productLineHeader.name
+       // let productLineHeader = products[section]
+        return products.name
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int
     {
-        return products.count
+        return 1
     }
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return products[section].products.count
+        return products.products.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableViewCell
         
-        let product = products[indexPath.section].products[indexPath.row]
+        let product = products.products[indexPath.row]
         
         cell.product = product
    
@@ -51,9 +63,8 @@ class ProductsTableViewController: UITableViewController {
     {
         if editingStyle == .delete
         {
-            let productLine = products[indexPath.section]
-            productLine.products.remove(at: indexPath.row)
             
+            products.products.remove(at: indexPath.row)
             //tableView.reloadData()
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
@@ -65,20 +76,20 @@ class ProductsTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
     {
-        let productToMove = products[sourceIndexPath.section].products[sourceIndexPath.row]
+        let productToMove = products.products[sourceIndexPath.row]
       // move productToMove to destination product
-      products[destinationIndexPath.section].products
+      products.products
                 .insert(productToMove,
                         at: destinationIndexPath.row)
       // delete productToMove from the source products
-      products[destinationIndexPath.section].products
+      products.products
             .remove(at: sourceIndexPath.row)
     }
     
     var selectedProduct: Product?
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        let product = products[indexPath.section].products[indexPath.row]
+        let product = products.products[indexPath.row]
         selectedProduct = product
         performSegue(withIdentifier: "ShowProductDetail", sender: nil)
     }

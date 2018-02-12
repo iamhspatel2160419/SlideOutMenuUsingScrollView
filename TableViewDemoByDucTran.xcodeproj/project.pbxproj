@@ -16,6 +16,8 @@
 		E01C21B42010DC6E00EA594B /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C21B32010DC6E00EA594B /* ProductsTableViewController.swift */; };
 		E01C21B82011070800EA594B /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C21B72011070800EA594B /* ProductTableViewCell.swift */; };
 		E01ED7E42011BD7800624A97 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01ED7E32011BD7800624A97 /* DetailTableViewController.swift */; };
+		E09BDFED2031B7D700DE672D /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDFEC2031B7D700DE672D /* MenuTableViewController.swift */; };
+		E09BDFEF2031B98200DE672D /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDFEE2031B98200DE672D /* SidebarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		E01C21B32010DC6E00EA594B /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		E01C21B72011070800EA594B /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		E01ED7E32011BD7800624A97 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		E09BDFEC2031B7D700DE672D /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		E09BDFEE2031B98200DE672D /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 			children = (
 				E01C21B32010DC6E00EA594B /* ProductsTableViewController.swift */,
 				E01ED7E32011BD7800624A97 /* DetailTableViewController.swift */,
+				E09BDFEC2031B7D700DE672D /* MenuTableViewController.swift */,
+				E09BDFEE2031B98200DE672D /* SidebarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,11 +179,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E01ED7E42011BD7800624A97 /* DetailTableViewController.swift in Sources */,
+				E09BDFED2031B7D700DE672D /* MenuTableViewController.swift in Sources */,
 				E01C21B22010D19600EA594B /* ProductLine.swift in Sources */,
 				E01C219C2010CB4100EA594B /* AppDelegate.swift in Sources */,
 				E01C21B82011070800EA594B /* ProductTableViewCell.swift in Sources */,
 				E01C21B02010CEE900EA594B /* Product.swift in Sources */,
 				E01C21B42010DC6E00EA594B /* ProductsTableViewController.swift in Sources */,
+				E09BDFEF2031B98200DE672D /* SidebarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

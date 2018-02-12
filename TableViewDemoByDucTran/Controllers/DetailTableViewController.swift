@@ -31,6 +31,7 @@ class DetailTableViewController: UITableViewController {
         
     }
     
+   
     // MARK :- UITableViewDelegate
     
     override func tableView(_ tableView: UITableView,
