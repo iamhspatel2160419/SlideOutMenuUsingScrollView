@@ -18,6 +18,8 @@
 		E01ED7E42011BD7800624A97 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01ED7E32011BD7800624A97 /* DetailTableViewController.swift */; };
 		E09BDFED2031B7D700DE672D /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDFEC2031B7D700DE672D /* MenuTableViewController.swift */; };
 		E09BDFEF2031B98200DE672D /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BDFEE2031B98200DE672D /* SidebarViewController.swift */; };
+		E09E857E203200870026D2D0 /* Simulator Screen Shot - iPhone 6 - 2018-02-12 at 08.16.53.png in Resources */ = {isa = PBXBuildFile; fileRef = E09E857D203200840026D2D0 /* Simulator Screen Shot - iPhone 6 - 2018-02-12 at 08.16.53.png */; };
+		E09E8580203200970026D2D0 /* Simulator Screen Shot - iPhone 6 - 2018-02-12 at 08.17.31.png in Resources */ = {isa = PBXBuildFile; fileRef = E09E857F203200900026D2D0 /* Simulator Screen Shot - iPhone 6 - 2018-02-12 at 08.17.31.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		E01ED7E32011BD7800624A97 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		E09BDFEC2031B7D700DE672D /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		E09BDFEE2031B98200DE672D /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
+		E09E857D203200840026D2D0 /* Simulator Screen Shot - iPhone 6 - 2018-02-12 at 08.16.53.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 6 - 2018-02-12 at 08.16.53.png"; sourceTree = "<group>"; };
+		E09E857F203200900026D2D0 /* Simulator Screen Shot - iPhone 6 - 2018-02-12 at 08.17.31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 6 - 2018-02-12 at 08.17.31.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				E01C219B2010CB4100EA594B /* AppDelegate.swift */,
 				E01C21A22010CB4200EA594B /* Assets.xcassets */,
 				E01C21A42010CB4200EA594B /* LaunchScreen.storyboard */,
+				E09E857F203200900026D2D0 /* Simulator Screen Shot - iPhone 6 - 2018-02-12 at 08.17.31.png */,
+				E09E857D203200840026D2D0 /* Simulator Screen Shot - iPhone 6 - 2018-02-12 at 08.16.53.png */,
 				E01C21A72010CB4200EA594B /* Info.plist */,
 				E01C21B52010FE3B00EA594B /* Controllers */,
 			);
@@ -167,7 +173,9 @@
 			files = (
 				E01C21A62010CB4200EA594B /* LaunchScreen.storyboard in Resources */,
 				E01C21A32010CB4200EA594B /* Assets.xcassets in Resources */,
+				E09E8580203200970026D2D0 /* Simulator Screen Shot - iPhone 6 - 2018-02-12 at 08.17.31.png in Resources */,
 				E01C21A12010CB4200EA594B /* Main.storyboard in Resources */,
+				E09E857E203200870026D2D0 /* Simulator Screen Shot - iPhone 6 - 2018-02-12 at 08.16.53.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
