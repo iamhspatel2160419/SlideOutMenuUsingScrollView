@@ -13,11 +13,13 @@ class SidebarViewController : UIViewController
     var mainViewController:UIViewController! // your main UI View
     var overLap:CGFloat!
     
-    var productTabeleVC:ProductsTableViewController!
-    
+    var productTabeleVC:ProductsTableViewController! = ProductsTableViewController()
     var scrollView: UIScrollView!
     var isFirstOpen = true
     
+    override func viewDidLoad() {
+        productTabeleVC.delegate=self
+    }
     override func viewDidLayoutSubviews()
     {
         super.viewDidLayoutSubviews()
@@ -26,6 +28,7 @@ class SidebarViewController : UIViewController
             isFirstOpen=false
             closeMenu(animated: false)
         }
+        
     }
    
     
@@ -51,7 +54,7 @@ class SidebarViewController : UIViewController
         setupScrollView()
         setupViewController()
         
-        productTabeleVC = ProductsTableViewController()
+       
         productTabeleVC.delegate=self
         
         
@@ -164,6 +167,7 @@ extension SidebarViewController:toggleForLeftSide
     func toggleLeftSide(productsTVC:ProductsTableViewController)
     {
         toggleLeftMenu(animated: true)
+        print("Here")
     }
 }
 

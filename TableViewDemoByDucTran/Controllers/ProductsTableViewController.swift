@@ -30,6 +30,7 @@ class ProductsTableViewController: UITableViewController
     @IBAction func toggleLeftSideBar(_ sender: UIBarButtonItem)
     {
         delegate?.toggleLeftSide(productsTVC: self)
+        print("bar button")
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
