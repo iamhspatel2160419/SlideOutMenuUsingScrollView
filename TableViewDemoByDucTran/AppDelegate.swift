@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         menuNav = UINavigationController(rootViewController: MenuVC)
         
-        sideBarVC = SidebarViewController(leftViewController: MenuVC,
+        sideBarVC = SidebarViewController(leftViewController: menuNav,
                                           mainViewController: productNav,
                                           overLap: 86.0)
         

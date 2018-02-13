@@ -8,14 +8,12 @@
 
 import UIKit
 
-protocol toggleForLeftSide:class {
-    func toggleLeftSide(productsTVC:ProductsTableViewController)
-}
+
 
 class ProductsTableViewController: UITableViewController
 {
     
-    weak var delegate:toggleForLeftSide?
+   
 
     var products:ProductLine = ProductLine.productLines().first!
     
@@ -29,8 +27,8 @@ class ProductsTableViewController: UITableViewController
     }
     @IBAction func toggleLeftSideBar(_ sender: UIBarButtonItem)
     {
-        delegate?.toggleLeftSide(productsTVC: self)
-        print("bar button")
+        NotificationCenter.default.post(name: Notification.Name("toggleMethodCall"), object: nil)
+       
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

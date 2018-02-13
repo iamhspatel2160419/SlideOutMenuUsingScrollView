@@ -13,23 +13,32 @@ class SidebarViewController : UIViewController
     var mainViewController:UIViewController! // your main UI View
     var overLap:CGFloat!
     
-    var productTabeleVC:ProductsTableViewController! = ProductsTableViewController()
+    
     var scrollView: UIScrollView!
     var isFirstOpen = true
     
-    override func viewDidLoad() {
-        productTabeleVC.delegate=self
-    }
+   
     override func viewDidLayoutSubviews()
     {
         super.viewDidLayoutSubviews()
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("toggleMethodCall"), object: nil)
+
+        
+       
         if isFirstOpen
         {
             isFirstOpen=false
             closeMenu(animated: false)
+           
         }
-        
     }
+    
+    @objc func methodOfReceivedNotification(notification: Notification){
+         toggleLeftMenu(animated: true)
+    }
+    
    
     
     required init?(coder aDecoder: NSCoder)
@@ -55,7 +64,7 @@ class SidebarViewController : UIViewController
         setupViewController()
         
        
-        productTabeleVC.delegate=self
+        
         
         
     }
@@ -137,7 +146,7 @@ class SidebarViewController : UIViewController
        return scrollView.contentOffset.x==0
     }
     
-    func toggleLeftMenu(animated:Bool)
+     func toggleLeftMenu(animated:Bool)
     {
         if isLeftOpen()
         {
@@ -147,6 +156,11 @@ class SidebarViewController : UIViewController
         {
             openLeftMenu(animated: animated)
         }
+    }
+    deinit {
+        // Release all recoureces
+        // perform the deinitialization
+        NotificationCenter.default.removeObserver(self)
     }
     
     
@@ -162,14 +176,7 @@ private extension UIView
         layer.shadowColor=UIColor.black.cgColor
     }
 }
-extension SidebarViewController:toggleForLeftSide
-{
-    func toggleLeftSide(productsTVC:ProductsTableViewController)
-    {
-        toggleLeftMenu(animated: true)
-        print("Here")
-    }
-}
+
 
 
 
